@@ -1,0 +1,7 @@
+entities/BankCustomer.class
+entities/MakeTestData.class
+facades/CustomerFacade.class
+rest/service/BankCustomerResource.class
+entities/BankCustomer_.class
+rest/service/ApplicationConfig.class
+dto/CustomerDTO.class
