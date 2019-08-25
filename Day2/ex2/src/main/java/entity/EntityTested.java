@@ -17,8 +17,8 @@ import javax.persistence.Persistence;
 public class EntityTested {
 
     public static void main(String[] args) {
-        Customer c1 = new Customer("sne", "krishna");
-        Customer c2 = new Customer("hara", "krishna");
+        Customer c1 = new Customer("Hans", "Hansen");
+        Customer c2 = new Customer("Peter", "Petersen");
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -27,10 +27,10 @@ public class EntityTested {
         em.getTransaction().commit();
         CustomerFacade cf = new CustomerFacade();
         System.out.println(cf.findByID(Long.valueOf(1)).getLname());
-        System.out.println(cf.findByLastName("krishna"));
+        System.out.println(cf.findByLastName("Hansen"));
         System.out.println(cf.getNumberOfCustomers());
         System.out.println(cf.allCustomers());
-        System.out.println(cf.addCustomer("hara", "krishna"));
+        System.out.println(cf.addCustomer("Jens", "Jensen"));
 
     }
 }

@@ -47,11 +47,11 @@ public class CustomerFacade {
         }
     }
 
-    public Long getNumberOfCustomers() {
+    public int getNumberOfCustomers() {
         EntityManager em = emf.createEntityManager();
         try {
             Query q1 = em.createQuery("select count(c) from Customer c");
-            return (Long) q1.getSingleResult();
+            return Integer.valueOf(String.valueOf(q1.getSingleResult()));
         } finally {
             em.close();
         }
